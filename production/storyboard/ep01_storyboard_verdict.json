@@ -1,0 +1,23 @@
+{
+  "checked_at": "2026-04-08T02:47:26.850973+00:00",
+  "verdict": "PASS",
+  "total_pairs": 1,
+  "failures": [
+    {
+      "position": "Seg02 → Seg03",
+      "type": "action_transition",
+      "severity": "soft",
+      "description": "段落A结尾张伟揉着眼睛站定，段落B开头张伟变为左手捂嘴打哈欠，手部动作衔接略显跳跃，但属于困倦状态下的自然小动作，问题不大。",
+      "fix_applied": null
+    },
+    {
+      "position": "Seg02 → Seg03",
+      "type": "emotion_transition",
+      "severity": "soft",
+      "description": "段落A中陈铭盯着手掌神情凝重（手颤抖、残留蓝光暗示紧张或震惊），段落B结尾陈铭却嘴角上扬露出神秘微笑，情绪从震惊/困惑转为神秘微笑缺少渐进过渡。",
+      "fix_applied": null
+    }
+  ],
+  "cross_episode_check": null,
+  "auto_fix_rounds": 1
+}

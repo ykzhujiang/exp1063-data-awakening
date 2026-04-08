@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-04-08T02:43:31.438289+00:00",
+  "checked_at": "2026-04-08T02:45:30.034393+00:00",
   "verdict": "PASS",
   "storyboard": "ep01.md",
   "setting": null,
@@ -43,6 +43,6 @@
   },
   "hard_fails": 0,
   "soft_warnings": 0,
-  "auto_fixed": true,
-  "fix_rounds": 1
+  "auto_fixed": false,
+  "fix_rounds": 0
 }
