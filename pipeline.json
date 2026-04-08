@@ -1,0 +1,33 @@
+{
+  "project": "exp1063-data-awakening",
+  "created_at": "2026-04-08T02:42:12.892532+00:00",
+  "github_repo": "ykzhujiang/exp1063-data-awakening",
+  "config": {
+    "theme": "深夜加班的程序员陈铭，盯着满屏报错代码快要崩溃。突然他发现自己能看见数据流——代码在眼前变成了发光的粒子河流，bug像黑色漩涡一样清晰可见。他下意识伸手抓住一个漩涡，整个屏幕的报错瞬间消失。他愣住，低头看手，指尖还残留着微弱蓝光。旁边同事打了个哈欠：修好了？走，吃宵夜。陈铭看着自己的手，嘴角浮现一丝不可思议的笑。",
+    "genre": "sci-fi",
+    "style": "realistic",
+    "duration": 15,
+    "characters": 2,
+    "setting": "中国·当代·科技公司深夜办公室",
+    "ratio": "9:16",
+    "episode": "ep01"
+  },
+  "status": "not_started",
+  "steps": {
+    "step1b": {
+      "status": "not_started"
+    },
+    "step1.5": {
+      "status": "not_started"
+    },
+    "step3": {
+      "status": "not_started"
+    },
+    "step4": {
+      "status": "not_started"
+    },
+    "step6": {
+      "status": "not_started"
+    }
+  }
+}
