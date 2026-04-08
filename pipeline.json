@@ -22,7 +22,8 @@
       "segment_count": 2
     },
     "step1.5": {
-      "status": "not_started"
+      "status": "in_progress",
+      "started_at": "2026-04-08T02:43:18.756765+00:00"
     },
     "step3": {
       "status": "not_started"
