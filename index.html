@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>觉醒 — 数据异能</title>
+<style>
+:root {
+  --bg: #0d1117;
+  --card-bg: #161b22;
+  --card-border: #30363d;
+  --text: #e6edf3;
+  --text-secondary: #8b949e;
+  --accent: #58a6ff;
+  --dialogue-bg: rgba(88,166,255,0.08);
+  --dialogue-color: #79c0ff;
+  --part-num-color: #f0883e;
+  --camera-bg: rgba(139,148,158,0.08);
+  --header-gradient: linear-gradient(135deg, #1a1f2e 0%, #0d1117 100%);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: -apple-system, "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: 680px; margin: 0 auto; padding: 16px; }
+.page-header {
+  background: var(--header-gradient);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 24px 20px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+.page-header h1 {
+  font-size: 22px; font-weight: 700; margin-bottom: 8px;
+  background: linear-gradient(90deg, #58a6ff, #bc8cff);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.page-header .meta { font-size: 13px; color: var(--text-secondary); }
+
+.section-title {
+  font-size: 16px; font-weight: 600; color: var(--accent);
+  margin: 20px 0 12px; padding-bottom: 6px;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.char-card, .scene-card {
+  background: var(--card-bg); border: 1px solid var(--card-border);
+  border-radius: 10px; padding: 14px 16px; margin-bottom: 10px;
+}
+.char-name, .scene-name {
+  font-weight: 600; color: #f0883e; font-size: 15px; margin-bottom: 4px;
+}
+.char-desc, .scene-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+
+.segment {
+  background: var(--card-bg); border: 1px solid var(--card-border);
+  border-radius: 12px; padding: 16px; margin-bottom: 14px;
+  position: relative; overflow: hidden;
+}
+.segment::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, #58a6ff, #bc8cff);
+}
+.seg-header {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 10px; padding-top: 4px;
+}
+.seg-title { font-size: 16px; font-weight: 700; color: #e6edf3; }
+.seg-dur { font-size: 12px; color: var(--text-secondary); background: rgba(88,166,255,0.1); padding: 2px 8px; border-radius: 10px; }
+.seg-meta { font-size: 13px; color: var(--text-secondary); margin-bottom: 6px; }
+.seg-meta span { margin-right: 12px; }
+.seg-meta .label { color: #8b949e; }
+.seg-meta .value { color: #c9d1d9; }
+
+.physical-state {
+  background: rgba(56,139,253,0.06); border-left: 3px solid #1f6feb;
+  border-radius: 0 8px 8px 0; padding: 10px 12px; margin: 10px 0;
+  font-size: 13px; color: var(--text-secondary);
+}
+.physical-state .ps-title { font-weight: 600; color: #58a6ff; margin-bottom: 4px; font-size: 12px; text-transform: uppercase; }
+
+.part {
+  padding: 8px 0; border-bottom: 1px solid rgba(48,54,61,0.5);
+  font-size: 15px;
+}
+.part:last-of-type { border-bottom: none; }
+.part-num { color: var(--part-num-color); font-weight: 700; margin-right: 6px; }
+.part-dialogue { color: var(--dialogue-color); background: var(--dialogue-bg); padding: 2px 6px; border-radius: 4px; }
+.part-char { color: #d2a8ff; font-weight: 600; }
+
+.camera-line {
+  background: var(--camera-bg); border-radius: 8px; padding: 8px 12px;
+  margin-top: 10px; font-size: 13px; color: var(--text-secondary);
+}
+.camera-line .cam-icon { margin-right: 4px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="page-header">
+  <h1>🔮 觉醒 — 数据异能</h1>
+  <div class="meta">EXP-1063 | 都市异能 · 程序员觉醒 | 15秒短剧剧本 | S-Format v7.5</div>
+</div>
+
+<div class="section-title">🎭 角色设定</div>
+<div class="char-card">
+  <div class="char-name">陈铭</div>
+  <div class="char-desc">28岁男性，身高175cm，体型消瘦，略显驼背，肤色苍白，缺乏血色，瓜子脸，颧骨突出，眼窝深陷，黑眼圈浓重，双眼无神，黑色短发，凌乱且泛着油光，穿着一件洗旧的蓝色格子衬衫，深色牛仔裤，脚穿一双旧运动鞋，戴着一副镜片厚重的黑色方框眼镜。</div>
+</div>
+<div class="char-card">
+  <div class="char-name">张伟</div>
+  <div class="char-desc">30岁男性，身高170cm，体型微胖，肩膀厚实，肤色偏黄，毛孔略粗，圆脸，脸颊饱满，眉毛浓密，双眼因疲惫而略显浮肿，乌黑色利落寸头，穿着一件宽松的灰色连帽卫衣，黑色休闲裤，脚穿白色运动鞋，脖子上挂着一个蓝色塑料边框的工牌。</div>
+</div>
+
+<div class="section-title">🏙️ 场景</div>
+<div class="scene-card">
+  <div class="scene-name">办公室-深夜</div>
+  <div class="scene-desc">昏暗的科技公司办公区，只有几台显示器散发着幽幽蓝光。桌面上堆满杂乱的外卖盒与空咖啡罐，背景是巨大玻璃幕墙外繁华的城市夜景。</div>
+</div>
+
+<div class="section-title">🎬 分镜剧本</div>
+
+<!-- Segment 01 -->
+<div class="segment">
+  <div class="seg-header">
+    <div class="seg-title">Segment 01</div>
+    <div class="seg-dur">10s</div>
+  </div>
+  <div class="seg-meta">
+    <span><span class="label">场景</span> <span class="value">办公室-深夜</span></span>
+    <span><span class="label">出演</span> <span class="value">陈铭</span></span>
+  </div>
+  <div class="physical-state">
+    <div class="ps-title">Physical State</div>
+    <span class="part-char">[陈铭]</span>: 画面中央，坐着，双手用力抓着头发，视线死死看着前方屏幕
+  </div>
+  <div class="part"><span class="part-num">[Part 1]</span> <span class="part-char">[陈铭]</span>双手抓头发，双眼布满血丝，死盯前方屏幕。</div>
+  <div class="part"><span class="part-num">[Part 2]</span> <span class="part-char">[陈铭]</span>瞳孔骤缩，屏幕飘出发光数据流和黑色漩涡。</div>
+  <div class="part"><span class="part-num">[Part 3]</span> <span class="part-char">[陈铭]</span>的内心独白，低声说：<span class="part-dialogue">"代码变实体了？"</span></div>
+  <div class="part"><span class="part-num">[Part 4]</span> <span class="part-char">[陈铭]</span>右手猛然伸出，捏碎半空漩涡，屏幕报错消失。</div>
+  <div class="camera-line"><span class="cam-icon">📷</span> 运镜：近景，平视角度，推镜头，正常速度。</div>
+</div>
+
+<!-- Segment 02 -->
+<div class="segment">
+  <div class="seg-header">
+    <div class="seg-title">Segment 02</div>
+    <div class="seg-dur">5s</div>
+  </div>
+  <div class="seg-meta">
+    <span><span class="label">场景</span> <span class="value">办公室-深夜</span></span>
+    <span><span class="label">出演</span> <span class="value">陈铭, 张伟</span></span>
+  </div>
+  <div class="physical-state">
+    <div class="ps-title">Physical State</div>
+    <span class="part-char">[陈铭]</span>: 画面中央，坐着，右手悬在半空，视线从屏幕转向自己的右手<br>
+    <span class="part-char">[张伟]</span>: 画面右侧边缘，站立，刚推门进入，视线面向陈铭
+  </div>
+  <div class="part"><span class="part-num">[Part 1]</span> <span class="part-char">[陈铭]</span>右手悬在半空微微颤抖，低头盯着自己的手掌，指尖残留一丝蓝光。</div>
+  <div class="part"><span class="part-num">[Part 2]</span> 身后传来门把手转动的咔嗒声，办公室门被推开，走廊的灯光从门缝涌入，<span class="part-char">[张伟]</span>探头走进来，左手还搭在门把上。</div>
+  <div class="part"><span class="part-num">[Part 3]</span> <span class="part-char">[张伟]</span>松开门把，门缓缓关上，他揉着眼睛往<span class="part-char">[陈铭]</span>方向走了两步，站定在画面右侧。</div>
+  <div class="camera-line"><span class="cam-icon">📷</span> 运镜：中景，平视角度，从左向右缓慢摇镜，正常速度。</div>
+</div>
+
+<!-- Segment 03 -->
+<div class="segment">
+  <div class="seg-header">
+    <div class="seg-title">Segment 03</div>
+    <div class="seg-dur">5s</div>
+  </div>
+  <div class="seg-meta">
+    <span><span class="label">场景</span> <span class="value">办公室-深夜</span></span>
+    <span><span class="label">出演</span> <span class="value">陈铭, 张伟</span></span>
+  </div>
+  <div class="physical-state">
+    <div class="ps-title">Physical State</div>
+    <span class="part-char">[陈铭]</span>: 画面左侧，坐着，右手悬在半空，视线看着自己的右手<br>
+    <span class="part-char">[张伟]</span>: 画面右侧，站立，左手捂着嘴巴，视线面向左侧的陈铭
+  </div>
+  <div class="part"><span class="part-num">[Part 1]</span> <span class="part-char">[陈铭]</span>坐画面左侧，呆看右手，指尖残留微弱蓝光。</div>
+  <div class="part"><span class="part-num">[Part 2]</span> <span class="part-char">[张伟]</span>站在右侧，左手捂嘴打哈欠，困倦地看向左边。</div>
+  <div class="part"><span class="part-num">[Part 3]</span> <span class="part-char">[张伟]</span>说：<span class="part-dialogue">"修好了？走，吃宵夜去。"</span></div>
+  <div class="part"><span class="part-num">[Part 4]</span> <span class="part-char">[陈铭]</span>低头看右手，嘴角上扬，露出一丝神秘的微笑。</div>
+  <div class="camera-line"><span class="cam-icon">📷</span> 运镜：中景，平视角度，固定机位，正常速度。</div>
+</div>
+
+</div>
+</body>
+</html>
